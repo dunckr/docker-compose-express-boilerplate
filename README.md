@@ -19,6 +19,9 @@ eval “$(docker-machine env dev)”
 ```
 make start
 ```
+```
+open http://`docker-machine ip dev`
+```
 
 ## Dev
 
