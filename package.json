@@ -1,0 +1,23 @@
+{
+  "name": "docker-compose-express-boilerplate",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dunckr/docker-compose-express-boilerplate.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-compose"
+  ],
+  "dependencies": {
+    "express": "^4.12.2"
+  },
+  "author": "Duncan Beaton <dunckr@gmail.com> (http://github.com/dunckr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dunckr/docker-compose-express-boilerplate/issues"
+  }
+}
