@@ -1,6 +1,7 @@
 {
   "name": "docker-compose-express-boilerplate",
   "version": "0.0.1",
+  "description": "Dockerised starter example express app with oppinonated commands.",
   "scripts": {
     "start": "nodemon ."
   },
@@ -15,6 +16,7 @@
   "dependencies": {
     "express": "^4.12.2"
   },
+  "homepage": "https://github.com/dunckr/docker-compose-express-boilerplate",
   "author": "Duncan Beaton <dunckr@gmail.com> (http://github.com/dunckr)",
   "license": "MIT",
   "bugs": {
