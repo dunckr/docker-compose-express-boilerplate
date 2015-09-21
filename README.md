@@ -1,6 +1,6 @@
 # Docker-Compose Express Boilerplate
 
-Dockerised starter example express app with oppinonated commands.
+Dockerised starter example express app with opinionated commands.
 
 ## Install
 
@@ -31,3 +31,7 @@ make cli
 ```
 make status
 ```
+
+## License
+
+MIT © [Duncan Beaton](http://dunckr.com)
