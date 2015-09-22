@@ -1,5 +1,7 @@
 web:
   build: .
   command: bash -c "npm run start"
+  volumes:
+    - .:/app
   ports:
     - "80:80"

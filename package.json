@@ -14,7 +14,7 @@
     "docker-compose"
   ],
   "dependencies": {
-    "express": "^4.12.2"
+    "express": "^4.13.3"
   },
   "homepage": "https://github.com/dunckr/docker-compose-express-boilerplate",
   "author": "Duncan Beaton <dunckr@gmail.com> (http://github.com/dunckr)",
