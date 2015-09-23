@@ -35,6 +35,15 @@ make cli
 make status
 ```
 
+## Test
+
+```
+make cli 
+```
+```
+npm run test
+```
+
 ## License
 
 MIT © [Duncan Beaton](http://dunckr.com)
