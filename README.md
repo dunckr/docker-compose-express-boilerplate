@@ -4,43 +4,36 @@ Dockerised starter example express app with opinionated commands.
 
 ## Install
 
-```
+```sh
 brew install docker boot2docker docker-machine docker-compose virtualmachine
-````
-```
 docker-machine create --driver virtualbox --virtualbox-memory 3076 dev
-```
-```
-eval “$(docker-machine env dev)”
+docker-machine start dev
+eval "$(docker-machine env dev)"
 ```
 
 ## Start
 
-```
+```sh
 make start
-```
-```
 open http://`docker-machine ip dev`
 ```
 
 ## Dev
 
-```
+```sh
 make cli
 ```
 
 ## Logs
 
-```
+```sh
 make status
 ```
 
 ## Test
 
-```
-make cli 
-```
-```
+```sh
+make cli
 npm run test
 ```
 
