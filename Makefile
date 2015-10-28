@@ -1,5 +1,8 @@
 CURRENT_DIRECTORY := $(shell pwd)
 
+build:
+	@docker-compose build
+
 start:
 	@docker-compose up -d
 
@@ -19,4 +22,4 @@ restart:
 	@docker-compose rm -f
 	@docker-compose up -d
 
-.PHONY: clean start stop status cli restart
+.PHONY: start stop status cli restart
