@@ -3,5 +3,8 @@ web:
   command: bash -c "npm run start"
   volumes:
     - .:/app
+  working_dir: /app
   ports:
-    - "80:80"
+    - "3000:3000"
+  environment:
+    - PORT=3000

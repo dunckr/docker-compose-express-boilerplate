@@ -9,9 +9,5 @@ RUN cd /tmp && npm install
 RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 
 ADD . /app
-WORKDIR /app
-
-ENV PORT 80
-EXPOSE 80
 
 CMD npm start
