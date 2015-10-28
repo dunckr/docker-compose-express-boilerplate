@@ -14,14 +14,9 @@ eval "$(docker-machine env dev)"
 ## Start
 
 ```sh
+make build
 make start
 open http://`docker-machine ip dev`
-```
-
-## Dev
-
-```sh
-make cli
 ```
 
 ## Logs

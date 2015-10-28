@@ -17,14 +17,14 @@
   "dependencies": {
     "express": "^4.13.3"
   },
+  "devDependencies": {
+    "supertest": "^1.1.0",
+    "tape": "^4.2.2"
+  },
   "homepage": "https://github.com/dunckr/docker-compose-express-boilerplate",
   "author": "Duncan Beaton <dunckr@gmail.com> (http://github.com/dunckr)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dunckr/docker-compose-express-boilerplate/issues"
-  },
-  "devDependencies": {
-    "supertest": "^1.1.0",
-    "tape": "^4.2.0"
   }
 }
