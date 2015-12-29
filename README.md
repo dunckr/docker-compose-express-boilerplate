@@ -1,6 +1,6 @@
 # Docker-Compose Express Boilerplate
 
-Dockerised starter example express app with opinionated commands.
+Dockerised starter example express app. Includes optional Makefile commands.
 
 ## Install
 
@@ -16,7 +16,7 @@ eval "$(docker-machine env dev)"
 ```sh
 make build
 make start
-open http://`docker-machine ip dev`
+open http://`docker-machine ip dev`:3000
 ```
 
 ## Logs
