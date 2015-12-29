@@ -1,6 +1,6 @@
-var test = require('tape')
-var request = require('supertest')
-var app = require('../index')
+const test = require('tape')
+const request = require('supertest')
+const app = require('../index')
 
 test('server', (t) => {
   request(app)
