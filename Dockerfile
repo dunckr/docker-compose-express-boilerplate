@@ -1,13 +1,20 @@
-FROM node:5.3
+FROM node:7.2-slim
 
-RUN apt-get update
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+	echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+	apt-get update && \
+  apt-get install -y --no-install-recommends \
+	yarn && \
+  yarn global add nodemon
 
-RUN npm install nodemon -g
+COPY package.json yarn.* /tmp/
+WORKDIR /tmp
+RUN yarn install
 
-ADD package.json /tmp/package.json
-RUN cd /tmp && npm install
-RUN mkdir -p /app && cp -a /tmp/node_modules /app/ && cd /app
+ENV app /app
 
-ADD . /app
+RUN mkdir $app
+RUN cp -a /tmp/node_modules $app
 
-CMD npm start
+WORKDIR $app
+ADD . $app

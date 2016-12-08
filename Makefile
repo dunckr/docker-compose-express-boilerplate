@@ -1,25 +1,22 @@
-CURRENT_DIRECTORY := $(shell pwd)
+all: up
 
-build:
+up:
 	@docker-compose build
+	@docker-compose up
 
-start:
-	@docker-compose up -d
-
-stop:
-	@docker-compose rm -f
+halt:
 	@docker-compose stop
+	@docker-compose rm -f
 
 status:
 	@docker-compose ps
-	@docker-compose logs
+	@docker-compose logs -f
 
-cli:
+ssh:
 	@docker-compose run --rm web bash
 
-restart:
-	@docker-compose stop
-	@docker-compose rm -f
-	@docker-compose up -d
+destroy:
+	@docker ps -q -a | xargs docker stop
+	@docker ps -q -a | xargs docker rm
 
-.PHONY: start stop status cli restart
+.PHONY: up halt status ssh destroy create
