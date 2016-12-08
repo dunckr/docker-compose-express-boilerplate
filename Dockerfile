@@ -1,4 +1,4 @@
-FROM node:5.3
+FROM node:7.2-slim
 
 RUN apt-get update && \
   npm install nodemon -g
