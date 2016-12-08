@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
 
-app.set('port', 3000)
+app.set('port', process.env.PORT || 3000)
 app.set('message', 'Hello World!')
 
 app.get('/', (req, res) => {
   res.send(app.get('message'))
 })
 
-app.listen(process.env.PORT || app.get('port'))
+app.listen(app.get('port'))
 
 module.exports = app

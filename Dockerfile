@@ -1,13 +1,16 @@
 FROM node:5.3
 
-RUN apt-get update
+RUN apt-get update && \
+  npm install nodemon -g
 
-RUN npm install nodemon -g
+COPY package.json npm-shrinkwrap.* /tmp/
+WORKDIR /tmp
+RUN npm install
 
-ADD package.json /tmp/package.json
-RUN cd /tmp && npm install
-RUN mkdir -p /app && cp -a /tmp/node_modules /app/ && cd /app
+ENV app /app
 
-ADD . /app
+RUN mkdir $app
+RUN cp -a /tmp/node_modules $app
 
-CMD npm start
+WORKDIR $app
+ADD . $app

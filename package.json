@@ -1,6 +1,6 @@
 {
   "name": "docker-compose-express-boilerplate",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Dockerised starter example express app with oppinonated commands.",
   "scripts": {
     "start": "nodemon -L index.js",
